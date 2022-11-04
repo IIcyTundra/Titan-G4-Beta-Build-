@@ -1,0 +1,32 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bi4h0d7p5332r"
+path="res://.godot/imported/bank gothic medium bt.ttf-e84c45a5878a8c84c5b658008950e592.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/General_Text/bank gothic medium bt.ttf"
+dest_files=["res://.godot/imported/bank gothic medium bt.ttf-e84c45a5878a8c84c5b658008950e592.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2t4m3mgw8ni6"]
+
+[ext_resource type="Script" path="res://Weapons/Unarmed/Unarmed.gd" id="1_3v0dq"]
+
+[node name="Unarmed" type="Node3D"]
+script = ExtResource("1_3v0dq")

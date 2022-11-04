@@ -1,0 +1,187 @@
+[gd_scene load_steps=11 format=3 uid="uid://cl7bgq6mmm3h8"]
+
+[ext_resource type="Script" path="res://Weapons/Armed/Assualt Rifle/MAR20.gd" id="1_oat8i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xao6e"]
+size = Vector3(0.072, 0.047, 0.547)
+
+[sub_resource type="BoxMesh" id="BoxMesh_af3bk"]
+size = Vector3(0.061, 0.033, 0.251)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xsonp"]
+size = Vector3(0.061, 0.031, 0.244)
+
+[sub_resource type="Animation" id="Animation_ho6ps"]
+resource_name = "Equip"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_weapon"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ir4sa"]
+resource_name = "Fire"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.0872665, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fire_bullet"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_xs44e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0872665, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgiig"]
+resource_name = "Reload"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e4xyq"]
+resource_name = "Unequip"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.5708, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide_weapon"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mpibe"]
+_data = {
+"Equip": SubResource("Animation_ho6ps"),
+"Fire": SubResource("Animation_ir4sa"),
+"RESET": SubResource("Animation_xs44e"),
+"Reload": SubResource("Animation_tgiig"),
+"Unequip": SubResource("Animation_e4xyq")
+}
+
+[node name="AR" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+top_level = true
+script = ExtResource("1_oat8i")
+weapon_name = "MAR20"
+
+[node name="Anchor" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 0, 0.856951)
+
+[node name="Body" type="Node3D" parent="Anchor"]
+transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871558, 0, 0.0871558, 0.996195, 0, -2.86102e-06, -0.796393)
+
+[node name="Frame1" type="MeshInstance3D" parent="Anchor/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.86102e-06, -0.0823327)
+layers = 2
+mesh = SubResource("BoxMesh_xao6e")
+skeleton = NodePath("../../..")
+
+[node name="Frame2" type="MeshInstance3D" parent="Anchor/Body"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, -0.0929971, -0.0606066)
+mesh = SubResource("BoxMesh_af3bk")
+skeleton = NodePath("../Frame1")
+
+[node name="Frame3" type="MeshInstance3D" parent="Anchor/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0929971, 0.0683844)
+mesh = SubResource("BoxMesh_xsonp")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mpibe")
+}
