@@ -1,12 +1,12 @@
 extends Weapon
 
 
-func gun_fire():
+func fire():
 	pass
 	
 func fire_stop():
 	pass
 	
-func gun_reload():
+func reload():
 	pass
 	

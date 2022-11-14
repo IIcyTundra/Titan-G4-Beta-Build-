@@ -3,7 +3,7 @@ extends Node3D
 #All weapons in the game
 var all_weapons = {}
 
-#Weapons carries
+#Weapons carried
 var weapons = {}
 
 #HUD
@@ -122,7 +122,7 @@ func previous_weapon():
 func fire():
 	print("Firing")
 	if not changing_weapon:
-		current_weapon.gun_fire()
+		current_weapon.fire()
 		
 func fire_stop():
 	current_weapon.fire_stop()

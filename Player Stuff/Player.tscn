@@ -31,11 +31,9 @@ script = ExtResource("3_sqgd4")
 [node name="AR" parent="Head/Camera/Weapons" groups=["Automatic", "Kinetic"] instance=ExtResource("3_pj7o8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049, -0.0150001, 0.081273)
 top_level = false
-fire_rate = 0.5
 
 [node name="Unarmed" parent="Head/Camera/Weapons" instance=ExtResource("3_v8ews")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177, -2.47013, 0.281)
-weapon_name = "Unarmed"
 
 [node name="GunRenderContainer" type="SubViewportContainer" parent="Head/Camera"]
 anchors_preset = 15

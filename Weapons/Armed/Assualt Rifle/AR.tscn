@@ -157,7 +157,6 @@ _data = {
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 top_level = true
 script = ExtResource("1_oat8i")
-weapon_name = "MAR20"
 
 [node name="Anchor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 0, 0.856951)

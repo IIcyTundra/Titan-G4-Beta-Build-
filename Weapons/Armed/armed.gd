@@ -25,7 +25,7 @@ var is_reloading = false
 
 
 # Fire Cycle
-func gun_fire():
+func fire():
 	print("Is Firing")
 	if not is_reloading:
 		if ammo_in_mag > 0:
@@ -40,7 +40,7 @@ func gun_fire():
 			fire_stop()
 
 func fire_stop():
-	#animation_player.get_animation("Fire").loop = false
+	animation_player.get_animation("Fire").loop = false
 	is_firing = false
 	
 
@@ -49,7 +49,7 @@ func fire_bullet(): # Will be called from the animation track
 	update_ammo("consume")
 
 
-func gun_reload():
+func reload():
 	if ammo_in_mag < mag_size and extra_ammo > 0:
 		is_firing = false
 		

@@ -12,12 +12,17 @@ _global_script_classes=[{
 "base": "Weapon",
 "class": &"Armed",
 "language": &"GDScript",
-"path": "res://Weapons/Armed/armed.gd"
+"path": "res://Weapons/Armed/Armed.gd"
 }, {
 "base": "CharacterBody3D",
 "class": &"Player",
 "language": &"GDScript",
 "path": "res://Player Stuff/Scripts/CharacterBody3d.gd"
+}, {
+"base": "EditorPlugin",
+"class": &"TBPlugin",
+"language": &"GDScript",
+"path": "res://addons/tbloader/src/plugin.gd"
 }, {
 "base": "Node3D",
 "class": &"Weapon",
@@ -27,6 +32,7 @@ _global_script_classes=[{
 _global_script_class_icons={
 "Armed": "",
 "Player": "",
+"TBPlugin": "",
 "Weapon": ""
 }
 
